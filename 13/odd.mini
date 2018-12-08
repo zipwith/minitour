@@ -1,0 +1,11 @@
+int i;
+while (true) {
+  int j;
+  while (true) {
+    int k;
+    k = 1;
+  }
+  int m;
+  m = 4;
+}
+

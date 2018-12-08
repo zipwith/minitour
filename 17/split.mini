@@ -1,0 +1,8 @@
+int i, j;
+if (i>0) {
+  boolean b;
+  print j;
+} else {
+  int j;
+  print i;
+}

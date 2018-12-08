@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>My Pretty-Printed Mini Program</title>
+<style type="text/css">
+  body     {white-space:pre;
+            background-color:#ffffcc;
+            color:black;
+            font-family:"Lucida Console","Courier New",Monotype}
+  .normalId    {background-color:transparent}
+  .defId       {color:red}
+  .useId       {color:blue}
+  .highlightId {background-color:lightblue}
+</style>
+</head>
+<script language="javascript">
+function change(n,m,s) {
+  elem=document.getElementById("("+n+", "+m+")");
+  elem.className=s;
+}
+function highlightId(n, m) { change(n,m,"highlightId"); }
+function defId(n, m)       { change(n,m,"defId"); }
+function useId(n, m)       { change(n,m,"useId"); }
+function normalId(n, m)    { change(n,m,"normalId"); }
+</script>
+<body>
+int <span class="normal" id="(5, 2)" title="(5, 2)" onmouseover="defId(5, 2);highlightId(11, 7);highlightId(7, 6);highlightId(3, 6);highlightId(8, 5);highlightId(1, 3)" onmouseout="normalId(5, 2);normalId(11, 7);normalId(7, 6);normalId(3, 6);normalId(8, 5);normalId(1, 3)">i</span>, <span class="normal" id="(8, 2)" title="(8, 2)" onmouseover="defId(8, 2);highlightId(7, 9);highlightId(7, 7);highlightId(3, 7);highlightId(1, 4)" onmouseout="normalId(8, 2);normalId(7, 9);normalId(7, 7);normalId(3, 7);normalId(1, 4)">t</span>;
+<span class="normal" id="(1, 3)" title="(1, 3)" onmouseover="useId(1, 3);highlightId(5, 2)" onmouseout="normalId(1, 3);normalId(5, 2)">i</span> = 0;
+<span class="normal" id="(1, 4)" title="(1, 4)" onmouseover="useId(1, 4);highlightId(8, 2)" onmouseout="normalId(1, 4);normalId(8, 2)">t</span> = 0;
+while (<span class="normal" id="(8, 5)" title="(8, 5)" onmouseover="useId(8, 5);highlightId(5, 2)" onmouseout="normalId(8, 5);normalId(5, 2)">i</span><10) {
+    <span class="normal" id="(3, 6)" title="(3, 6)" onmouseover="useId(3, 6);highlightId(5, 2)" onmouseout="normalId(3, 6);normalId(5, 2)">i</span> = <span class="normal" id="(7, 6)" title="(7, 6)" onmouseover="useId(7, 6);highlightId(5, 2)" onmouseout="normalId(7, 6);normalId(5, 2)">i</span>+1;
+    <span class="normal" id="(3, 7)" title="(3, 7)" onmouseover="useId(3, 7);highlightId(8, 2)" onmouseout="normalId(3, 7);normalId(8, 2)">t</span> = <span class="normal" id="(7, 7)" title="(7, 7)" onmouseover="useId(7, 7);highlightId(8, 2)" onmouseout="normalId(7, 7);normalId(8, 2)">t</span>+<span class="normal" id="(11, 7)" title="(11, 7)" onmouseover="useId(11, 7);highlightId(5, 2)" onmouseout="normalId(11, 7);normalId(5, 2)">i</span>;
+}
+print <span class="normal" id="(7, 9)" title="(7, 9)" onmouseover="useId(7, 9);highlightId(8, 2)" onmouseout="normalId(7, 9);normalId(8, 2)">t</span>;
+
+</body>
+</html>

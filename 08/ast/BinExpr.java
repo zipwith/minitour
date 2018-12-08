@@ -1,0 +1,58 @@
+/*
+    Copyright 2018 Mark P Jones, Portland State University
+
+    This file is part of minitour.
+
+    minitour is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    minitour is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with minitour.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+package ast;
+import compiler.Position;
+
+/** Abstract syntax for binary expressions.
+ */
+public abstract class BinExpr extends Expr {
+
+    /** The left subexpression.
+     */
+    protected Expr left;
+
+    /** The right subexpression.
+     */
+    protected Expr right;
+
+    /** Default constructor.
+     */
+    public BinExpr(Position pos, Expr left, Expr right) {
+        super(pos);
+        this.left = left;
+        this.right = right;
+    }
+
+    /** Return a string that provides a simple description of this
+     *  particular type of operator node.
+     */
+    abstract String label();
+
+    /** Print an indented description of this abstract syntax node,
+     *  including a name for the node itself at the specified level
+     *  of indentation, plus more deeply indented descriptions of
+     *  any child nodes.
+     */
+    public void indent(IndentOutput out, int n) {
+        out.indent(n, label());
+        left.indent(out, n+1);
+        right.indent(out, n+1);
+    }
+}

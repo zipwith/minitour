@@ -1,0 +1,9 @@
+// A simple test
+int i, t;
+i = 0;
+t = 0;
+while (i\u003c10) {
+  i = i + 1;
+  t = t + i;
+}
+print t;
